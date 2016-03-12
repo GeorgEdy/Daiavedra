@@ -32,7 +32,7 @@
             </div>
             <div class="col-md-12 text-center telefoane-contact">
                 <a href="#" class="open-contact">
-                    <span class="badge">+40 724 251 525</span> <span class="badge">+40 341 414 777</span>
+                    <span class="badge">+40 724 251 525</span> <span class="badge">+40 341 41ssss4 777</span>
                 </a>
             </div>
         </div>
