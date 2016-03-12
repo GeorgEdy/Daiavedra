@@ -18,10 +18,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.2.3/css/simple-line-icons.css">
 </head>
 
-<body <?php body_class(); ?>>
-
+<body ng-app="daia"  <?php body_class(); ?>>
 <div class="background-image fade-in patru"></div>
-
 <header>
     <div class="container fade-in unu">
         <div class="row">
@@ -38,7 +36,6 @@
         </div>
     </div>
 </header>
-
 <div class="oferta-imagine fade-in trei">
     <h3>Hulhumale</h3>
     <p>
@@ -88,111 +85,42 @@
         </button>
     </div>
 </div>
-
-
-<div id="recomandari" class="container-fluid" style="margin-top:50px;">
-    <h1 class="text-center">Destinatii recomandate pentru o vacanta de neuitat</h1>
-    <div class="grid">
-        <figure class="effect-bubba">
-            <img src="http://q-ec.bstatic.com/images/city/max500/133/133568.jpg" alt="img16">
-            <figcaption>
-                <h2><span>Hulhumale</span></h2>
-                <p>destinaţia ideală pentru plajă, snorkeling şi scufundări!</p>
-                <a href="#">View more</a>
-            </figcaption>
-        </figure>
-        <figure class="effect-bubba">
-            <img src="http://q-ec.bstatic.com/images/city/max500/133/133568.jpg" alt="img16">
-            <figcaption>
-                <h2><span>Hulhumale</span></h2>
-                <p>destinaţia ideală pentru plajă, snorkeling şi scufundări!</p>
-                <a href="#">View more</a>
-            </figcaption>
-        </figure>
-        <figure class="effect-bubba">
-            <img src="http://q-ec.bstatic.com/images/city/max500/133/133568.jpg" alt="img16">
-            <figcaption>
-                <h2><span>Hulhumale</span></h2>
-                <p>destinaţia ideală pentru plajă, snorkeling şi scufundări!</p>
-                <a href="#">View more</a>
-            </figcaption>
-        </figure>
-        <figure class="effect-bubba">
-            <img src="http://q-ec.bstatic.com/images/city/max500/133/133568.jpg" alt="img16">
-            <figcaption>
-                <h2><span>Hulhumale</span></h2>
-                <p>destinaţia ideală pentru plajă, snorkeling şi scufundări!</p>
-                <a href="#">View more</a>
-            </figcaption>
-        </figure>
-        <figure class="effect-bubba">
-            <img src="http://q-ec.bstatic.com/images/city/max500/133/133568.jpg" alt="img16">
-            <figcaption>
-                <h2><span>Hulhumale</span></h2>
-                <p>destinaţia ideală pentru plajă, snorkeling şi scufundări!</p>
-                <a href="#">View more</a>
-            </figcaption>
-        </figure>
-        <figure class="effect-bubba">
-            <img src="http://q-ec.bstatic.com/images/city/max500/133/133568.jpg" alt="img16">
-            <figcaption>
-                <h2><span>Hulhumale</span></h2>
-                <p>destinaţia ideală pentru plajă, snorkeling şi scufundări!</p>
-                <a href="#">View more</a>
-            </figcaption>
-        </figure>
-        <figure class="effect-bubba">
-            <img src="http://q-ec.bstatic.com/images/city/max500/133/133568.jpg" alt="img16">
-            <figcaption>
-                <h2><span>Hulhumale</span></h2>
-                <p>destinaţia ideală pentru plajă, snorkeling şi scufundări!</p>
-                <a href="#">View more</a>
-            </figcaption>
-        </figure>
-        <figure class="effect-bubba">
-            <img src="http://q-ec.bstatic.com/images/city/max500/133/133568.jpg" alt="img16">
-            <figcaption>
-                <h2><span>Hulhumale</span></h2>
-                <p>destinaţia ideală pentru plajă, snorkeling şi scufundări!</p>
-                <a href="#">View more</a>
-            </figcaption>
-        </figure>
-        <figure class="effect-bubba">
-            <img src="http://q-ec.bstatic.com/images/city/max500/133/133568.jpg" alt="img16">
-            <figcaption>
-                <h2><span>Hulhumale</span></h2>
-                <p>destinaţia ideală pentru plajă, snorkeling şi scufundări!</p>
-                <a href="#">View more</a>
-            </figcaption>
-        </figure>
-        <figure class="effect-bubba">
-            <img src="http://q-ec.bstatic.com/images/city/max500/133/133568.jpg" alt="img16">
-            <figcaption>
-                <h2><span>Hulhumale</span></h2>
-                <p>destinaţia ideală pentru plajă, snorkeling şi scufundări!</p>
-                <a href="#">View more</a>
-            </figcaption>
-        </figure>
-        <figure class="effect-bubba">
-            <img src="http://q-ec.bstatic.com/images/city/max500/133/133568.jpg" alt="img16">
-            <figcaption>
-                <h2><span>Hulhumale</span></h2>
-                <p>destinaţia ideală pentru plajă, snorkeling şi scufundări!</p>
-                <a href="#">View more</a>
-            </figcaption>
-        </figure>
-    </div>
-</div>
-
+<ng-view></ng-view>
 <footer id="colophon" class="site-footer" role="contentinfo">
     lalala
 </footer><!-- .site-footer -->
 
 <?php wp_footer(); ?>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script src="<?php echo get_template_directory_uri();?>/bower_components/jquery/dist/jquery.min.js"></script>
 <script src="<?php echo get_template_directory_uri();?>/bower_components/tether/dist/js/tether.min.js"></script>
 <script src="<?php echo get_template_directory_uri();?>/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="<?php echo get_template_directory_uri();?>/bower_components/angular/angular.min.js"></script>
+<script src="<?php echo get_template_directory_uri();?>/bower_components/angular-route/angular-route.min.js"></script>
+<script src="<?php echo get_template_directory_uri();?>/js/main.js"></script>
+<script>
+    $('body').on('click','#cautare-exacta',function(){
+        if($('#formular-cautare').is(":visible")){
+            window.location.href = "https://www.daiavedra.com/?s="+$('#input-cautare').val();
+        }else{
+            $('#formular-cautare').slideDown();
+        }
+    });
 
+    $(document).ready(function(){
+        $('#cautare-recomandari').on('click',function (e) {
+            e.preventDefault();
+
+            var target = this.hash;
+            var $target = $(target);
+
+            $('html, body').stop().animate({
+                'scrollTop': $("#recomandari").offset().top
+            }, 900, 'swing', function () {
+                window.location.hash = "#recomandari";
+            });
+        });
+    });
+</script>
 </body>
 </html>
 
