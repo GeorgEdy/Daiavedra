@@ -1,0 +1,15 @@
+<div class="container-fluid" style="margin-top:50px;">
+    <h1 class="text-center">Destinatii recomandate pentru o vacanta de neuitat</h1>
+
+    <div class="grid">
+        <figure class="effect-bubba" ng-repeat="oferta in recomandate">
+            <img src="{{ oferta.featured_image }}" alt="">
+            <figcaption>
+                <h2><span>{{ oferta.title.rendered }}</span></h2>
+                <p>destinaţia ideală pentru plajă, snorkeling şi scufundări!</p>
+                <a href="/newdaia/oferta/{{ oferta.slug }}">View more</a>
+            </figcaption>
+        </figure>
+    </div>
+</div>
+

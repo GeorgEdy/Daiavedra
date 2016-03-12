@@ -11,15 +11,57 @@ Tags: black, blue, gray, red, white, yellow, dark, light, one-column, two-column
 Text Domain: twentysixteen
 */
 
+/*utility classes */
+.absolute {
+    position: absolute;
+}
+
+.relative {
+    position: relative;
+}
+
+.clear {
+    clear: both;
+}
+
+.center {
+    margin: 0 auto;
+}
+
+/*=================*/
+
 .background-image {
-     position: relative;
-     content: '';
-     display: block;
-     width: 100%;
-     height: 100vh;
-     z-index: -1;
-     background: #fff url('http://188.27.254.146/newdaia/wp-content/uploads/2016/03/maldives-666118_1920.jpg') center center fixed no-repeat;
-     background-size: cover;
+    position: relative;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    background: #fff url('http://188.27.254.146/newdaia/wp-content/uploads/2016/03/maldives-666118_1920.jpg') center center fixed no-repeat;
+    background-size: cover;
+}
+
+.header-input {
+    margin: 0;
+    line-height: inherit;
+    border-radius: 2px;
+    border: none;
+    width: 100%;
+    height: 45px;
+}
+
+.search-options {
+    top: 50%;
+    font-size: 20px;
+    right: 5%;
+    transform: translateY(-50%);
+}
+
+.search-button {
+    top: 50%;
+    right: 1%;
+    transform: translateY(-50%);
+    font-size: 20px;
 }
 
 body {
@@ -33,26 +75,32 @@ a, a:hover, a:active, a:visited {
 
 header {
     position: absolute;
-    top:5vh;
-    width:100%;
+    top: 5vh;
+    width: 100%;
+    height: 98%;
+}
+
+.input-wrapper {
+    width: 70%;
+    margin: 0 auto;
 }
 
 .oferta-imagine {
     position: absolute;
-    bottom:5vh;
-    left:5vw;
+    bottom: 5vh;
+    left: 5vw;
 }
 
 .telefoane-contact {
     font-family: 'Roboto', sans-serif;
-    font-size:4vh;
+    font-size: 4vh;
 }
 
 .social-media {
-    position:absolute;
-    bottom:3vh;
-    right:3vw;
-    font-size:30px;
+    position: absolute;
+    bottom: 3vh;
+    right: 3vw;
+    font-size: 30px;
 }
 
 .social-media a {
@@ -64,14 +112,14 @@ header {
 }
 
 .first-form {
-    position:absolute;
-    background-color: rgba(233,233,233,0.6);
-    width:50%;
-    left:50%;
-    top:50%;
-    transform: translate(-50%,-50%);
+    position: absolute;
+    background-color: rgba(233, 233, 233, 0.6);
+    width: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     border-radius: 5px;
-    padding-bottom:10px;
+    padding-bottom: 10px;
 }
 
 .first-form h3 {
@@ -81,30 +129,52 @@ header {
 }
 
 .first-form input {
-    width:100%;
+    width: 100%;
 }
-
 
 /* FADE EFFECTS */
 
 /* make keyframes that tell the start state and the end state of our object */
-@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
-@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 
 .fade-in {
-    opacity:0;  /* make things invisible upon start */
-    -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
-    -moz-animation:fadeIn ease-in 1;
-    animation:fadeIn ease-in 1;
+    opacity: 0; /* make things invisible upon start */
+    -webkit-animation: fadeIn ease-in 1; /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -moz-animation: fadeIn ease-in 1;
+    animation: fadeIn ease-in 1;
 
-    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
-    -moz-animation-fill-mode:forwards;
-    animation-fill-mode:forwards;
+    -webkit-animation-fill-mode: forwards; /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
 
-    -webkit-animation-duration:1s;
-    -moz-animation-duration:1s;
-    animation-duration:1s;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    animation-duration: 1s;
 }
 
 .fade-in.unu {
@@ -131,9 +201,6 @@ header {
     animation-delay: 1s;
 }
 
-
-
-
 /* TAKEN */
 
 @-webkit-keyframes scroll-inner {
@@ -144,6 +211,7 @@ header {
         margin-top: 50%;
     }
 }
+
 @keyframes scroll-inner {
     from {
         margin-top: 15%;
@@ -152,6 +220,7 @@ header {
         margin-top: 50%;
     }
 }
+
 @-webkit-keyframes scroll-mouse {
     from {
         margin-top: 0;
@@ -160,6 +229,7 @@ header {
         margin-top: 15px;
     }
 }
+
 @keyframes scroll-mouse {
     from {
         margin-top: 0;
@@ -168,12 +238,13 @@ header {
         margin-top: 15px;
     }
 }
+
 div.mouse-container {
     position: absolute;
     display: block;
     height: 100px;
-    bottom:20px;
-    left:48vw;
+    bottom: 20px;
+    left: 48vw;
 }
 
 div.mouse {
@@ -189,6 +260,7 @@ div.mouse {
     -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
 }
+
 div.mouse span.scroll-down {
     display: block;
     width: 10px;
@@ -209,17 +281,19 @@ div.mouse span.scroll-down {
 ::-webkit-scrollbar {
     width: 8px;
 }
+
 ::-webkit-scrollbar-track {
     background-color: #d5addc;
     border-left: 1px solid #c1c1c1;
 }
+
 ::-webkit-scrollbar-thumb {
     background-color: #ccc;
 }
+
 ::-webkit-scrollbar-thumb:hover {
     background-color: #632b59;
 }
-
 
 .input {
     position: relative;
@@ -373,7 +447,7 @@ div.mouse span.scroll-down {
 
 /* Common button styles */
 .button {
-    width:100%;
+    width: 100%;
     display: inline-block;
     padding: 1em 2em;
     border: none;
@@ -385,9 +459,11 @@ div.mouse span.scroll-down {
     -webkit-backface-visibility: hidden;
     -moz-osx-font-smoothing: grayscale;
 }
+
 .button:focus {
     outline: none;
 }
+
 .button > span {
     vertical-align: middle;
 }
@@ -401,6 +477,7 @@ div.mouse span.scroll-down {
     -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
     transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
 }
+
 .button--winona::after {
     content: attr(data-text);
     position: absolute;
@@ -413,15 +490,19 @@ div.mouse span.scroll-down {
     -webkit-transform: translate3d(0, 25%, 0);
     transform: translate3d(0, 25%, 0);
 }
+
 .button--winona > span {
     display: block;
 }
+
 .button--winona.button--inverted {
     color: #7986cb;
 }
+
 .button--winona.button--inverted:after {
     color: #f3fbfe;
 }
+
 .button--winona::after,
 .button--winona > span {
     padding: 1em 2em;
@@ -430,19 +511,23 @@ div.mouse span.scroll-down {
     -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
     transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
 }
+
 .button--winona:hover {
     border-color: #3f51b5;
     background-color: rgba(63, 81, 181, 0.1);
 }
+
 .button--winona.button--inverted:hover {
     border-color: #21333C;
     background-color: #21333C;
 }
+
 .button--winona:hover::after {
     opacity: 1;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
 }
+
 .button--winona:hover > span {
     opacity: 0;
     -webkit-transform: translate3d(0, -25%, 0);
@@ -566,23 +651,24 @@ figure.effect-bubba figcaption::after {
 figure.effect-bubba figcaption::before {
     border-top: 1px solid #fff;
     border-bottom: 1px solid #fff;
-    -webkit-transform: scale(0,1);
-    transform: scale(0,1);
+    -webkit-transform: scale(0, 1);
+    transform: scale(0, 1);
 }
 
 figure.effect-bubba figcaption::after {
     border-right: 1px solid #fff;
     border-left: 1px solid #fff;
-    -webkit-transform: scale(1,0);
-    transform: scale(1,0);
+    -webkit-transform: scale(1, 0);
+    transform: scale(1, 0);
 }
 
 figure.effect-bubba h2 {
     padding-top: 30%;
     -webkit-transition: -webkit-transform 0.35s;
     transition: transform 0.35s;
-    -webkit-transform: translate3d(0,-20px,0);
-    transform: translate3d(0,-20px,0);
+    -webkit-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0);
+    text-shadow: 2px 2px 2px #000;
 }
 
 figure.effect-bubba p {
@@ -590,8 +676,8 @@ figure.effect-bubba p {
     opacity: 0;
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
     transition: opacity 0.35s, transform 0.35s;
-    -webkit-transform: translate3d(0,20px,0);
-    transform: translate3d(0,20px,0);
+    -webkit-transform: translate3d(0, 20px, 0);
+    transform: translate3d(0, 20px, 0);
 }
 
 figure.effect-bubba:hover figcaption::before,
@@ -604,6 +690,6 @@ figure.effect-bubba:hover figcaption::after {
 figure.effect-bubba:hover h2,
 figure.effect-bubba:hover p {
     opacity: 1;
-    -webkit-transform: translate3d(0,0,0);
-    transform: translate3d(0,0,0);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
 }
